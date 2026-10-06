@@ -1,0 +1,7 @@
+omnitrack_env/
+huggingface_cache/
+__pycache__/
+*.safetensors
+*.bin
+*.mp4
+data/

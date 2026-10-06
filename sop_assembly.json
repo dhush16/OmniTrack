@@ -1,0 +1,32 @@
+{
+  "protocol_id": "SOP-ELEC-4091",
+  "initial_node": "v1_esd_grounding",
+  "nodes": {
+    "v1_esd_grounding": {
+      "title": "Step 1: ESD Wristband Grounding",
+      "prerequisites": []
+    },
+    "v2_pcb_seating": {
+      "title": "Step 2: PCB Motherboard Seating",
+      "prerequisites": ["v1_esd_grounding"]
+    },
+    "v3_cross_torque": {
+      "title": "Step 3: 4-Corner Diagonal Bolt Torque",
+      "prerequisites": ["v2_pcb_seating"]
+    },
+    "v4_thermal_paste": {
+      "title": "Step 4: Thermal Paste Dispensing",
+      "prerequisites": ["v3_cross_torque"]
+    },
+    "v5_heatsink_latch": {
+      "title": "Step 5: Dual Heatsink Cooler Latching",
+      "prerequisites": ["v4_thermal_paste"]
+    }
+  },
+  "edges": [
+    "v1_esd_grounding->v2_pcb_seating",
+    "v2_pcb_seating->v3_cross_torque",
+    "v3_cross_torque->v4_thermal_paste",
+    "v4_thermal_paste->v5_heatsink_latch"
+  ]
+}
